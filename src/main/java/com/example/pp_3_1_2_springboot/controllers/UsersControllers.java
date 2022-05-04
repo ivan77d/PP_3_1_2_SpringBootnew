@@ -22,7 +22,7 @@ public class UsersControllers {
         this.userService = userService;
     }
 
-    @GetMapping
+    @GetMapping()
     public String getUser(Principal principal, Model model) {
         User user = userService.loadUserByLogin(principal.getName());
         model.addAttribute("user", user);
